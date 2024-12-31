@@ -35,6 +35,7 @@ button {
   font-size: 18px;
   cursor: pointer;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -87,18 +88,38 @@ textarea {
 
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
+  div {
+    grid-template-columns: 1fr; /* Buttons stack in a single column */
+    gap: 8px;
+  }
+
   button {
-    width: 50px;
-    height: 50px;
+    width: 100%; /* Buttons span the full width */
+    height: 55px;
     font-size: 14px;
+  }
+  button:hover {
+    background-color: rgb(
+      68,
+      68,
+      68
+    ); /* Ensure hover works for smaller screens */
+  }
+  button:active {
+    background-color: rgb(
+      128,
+      128,
+      128
+    ); /* Ensure active works for smaller screens */
   }
 
   textarea {
-    height: 40px;
-    font-size: 14px;
+    height: 60px;
+    font-size: 18px;
+    padding-top: 15px;
   }
 
   .history {
-    width: 90%;
+    width: 90%; /* Adjust the width for small screens */
   }
 }
