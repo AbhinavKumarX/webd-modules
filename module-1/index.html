@@ -9,28 +9,28 @@
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <div>
-      <textarea id="display" rows="3" cols="20" readonly></textarea>
-      <!-- <br /> -->
+    <div class="calculator">
+      <textarea id="display" rows="2" cols="20" readonly></textarea>
       <button onclick="appendToDisplay('7')">7</button>
       <button onclick="appendToDisplay('8')">8</button>
       <button onclick="appendToDisplay('9')">9</button>
       <button onclick="appendToDisplay('+')">+</button>
-      <!-- <br /> -->
       <button onclick="appendToDisplay('4')">4</button>
       <button onclick="appendToDisplay('5')">5</button>
       <button onclick="appendToDisplay('6')">6</button>
       <button onclick="appendToDisplay('-')">-</button>
-      <!-- <br /> -->
       <button onclick="appendToDisplay('1')">1</button>
       <button onclick="appendToDisplay('2')">2</button>
       <button onclick="appendToDisplay('3')">3</button>
       <button onclick="appendToDisplay('*')">*</button>
-      <!-- <br /> -->
       <button onclick="appendToDisplay('0')">0</button>
       <button onclick="appendToDisplay('/')">/</button>
       <button onclick="clearDisplay()">C</button>
       <button onclick="calculateResult()">=</button>
+    </div>
+    <div class="history">
+      <h3>Calculation History</h3>
+      <ul id="history-list"></ul>
     </div>
   </body>
 </html>

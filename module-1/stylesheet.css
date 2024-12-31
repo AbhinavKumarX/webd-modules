@@ -5,28 +5,29 @@ body {
   padding: 0;
   background-color: rgb(169, 169, 169);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
 /* Styling the calculator container */
-div {
+.calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Creates a 4-column layout */
-  gap: 10px; /* Adds spacing between buttons */
+  gap: 10px;
   text-align: center;
-  background-color: rgb(169, 169, 169);
+  background-color: #d9d9d9;
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid rgb(68, 68, 68);
+  border: 2px solid #444;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling the buttons */
 button {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 55px;
   border-radius: 10px;
   background-color: rgb(68, 68, 68);
   color: white;
@@ -44,15 +45,44 @@ button:hover {
 textarea {
   grid-column: span 4; /* Makes the display span across 4 columns */
   width: 100%;
-  height: 50px;
+  height: 60px;
   border-radius: 10px;
-  border: 1px solid #ccc;
-  padding: 10px; /* Uncommented to add padding */
+  border: 2px solid #444; /* Adds a darker border */
+  padding: 15px;
   font-size: 22px;
   resize: none;
   text-align: right;
-  background-color: #e0e0e0; /* Changed to a light grey */
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  background-color: #e0e0e0;
+  box-sizing: border-box;
+  margin: 0%;
+}
+
+/* Styling the history section */
+.history {
+  margin-top: 20px;
+  background-color: rgb(220, 220, 220);
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history h3 {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.history ul li {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
 }
 
 /* Responsive design for smaller screens */
@@ -66,5 +96,9 @@ textarea {
   textarea {
     height: 40px;
     font-size: 14px;
+  }
+
+  .history {
+    width: 90%;
   }
 }
