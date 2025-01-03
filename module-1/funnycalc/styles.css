@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* Base styles for the calculator project */
+
+body {
+  font-family: "Space Mono", sans-serif;
+  background-color: hsl(0, 0%, 80%);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input:focus {
+  outline: none; /* Remove the blue border when focused */
+}
+
+.calculator {
+  color: hsl(0, 0%, 0%) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 60%);
+  border-radius: 20px;
+  border: none;
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  overflow: hidden;
+  -webkit-user-select: none; /* Prevent text selection on WebKit browsers */
+  user-select: none; /* Prevent text selection on other browsers */
+}
+
+.display {
+  font-family: "Orbitron", sans-serif;
+  width: 100%;
+  background-color: hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 0%);
+  font-size: 2em;
+  padding: 20px 5px;
+  border-radius: 10px;
+  text-align: right;
+  border: hsl(0, 0%, 0%);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px 0 0 0;
+}
+.button {
+  font-family: "Space Mono", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 40%);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5em;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+
+.button:active {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.button.operator {
+  background-color: hsl(0, 70%, 40%);
+}
+
+.button.operator:hover {
+  background-color: hsl(0, 80%, 70%);
+}
+
+.button.operator:active {
+  background-color: hsl(0, 80%, 80%);
+}
